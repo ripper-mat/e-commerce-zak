@@ -1,0 +1,32 @@
+<button routerLink="/">Home</button>
+
+<div class="container mt-4">
+  <h2>Elenco Ordini</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id ordine</th>
+        <th>Nome Cliente</th>
+        <th>Cognome Cliente</th>
+        <th>Nome prodotto</th>
+        <th>Marca</th>
+        <th>Prezzo</th>
+       <!--  <th>Azioni</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ordine of orders; let i = index">
+        <td>{{ ordine.id_ordine }}</td>
+        <td>{{ ordine.cliente.nome }}</td>
+        <td>{{ ordine.cliente.cognome }}</td>
+        <td>{{ ordine.prodotto.nome }}</td>
+        <td>{{ ordine.prodotto.marca }}</td>
+        <td>{{ ordine.prodotto.prezzo }}</td>
+      <!--   <td>
+          <button class="btn btn-primary" >Dettagli</button>
+        </td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+

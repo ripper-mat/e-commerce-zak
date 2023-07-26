@@ -1,0 +1,9 @@
+<p>delete-cliente works!</p>
+
+<form [formGroup]="homeForm" (ngSubmit)="onSubmit()">
+  <label>Id Cliente da eliminare</label>
+  <input type="number" formControlName="id">
+
+
+  <button type="submit">Invia</button>
+</form>

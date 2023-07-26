@@ -3,16 +3,29 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './featurs/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { HttpClientModule } from '@angular/common/http';
+
+//Angular materia
+
+import { MatTableModule } from '@angular/material/table';
+import { OrderService } from './services/orders/order.service';
+import { ReactiveFormsModule } from '@angular/forms';
+
+// fine Angular Material
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [OrderService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

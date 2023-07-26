@@ -1,0 +1,16 @@
+<form [formGroup]="homeForm" (ngSubmit)="onSubmit()" *ngIf="homeForm">
+  <label>Id da aggiornare</label>
+  <input type="number" formControlName="id">
+
+
+  <label>Nome</label>
+  <input type="text" formControlName="nome">
+
+  <label>Cognome</label>
+  <input type="text" formControlName="cognome" >
+
+  <label>Carta Di Credito</label>
+  <input type="text" formControlName="cartaDiCredito">
+
+  <button type="submit">Invia</button>
+</form>

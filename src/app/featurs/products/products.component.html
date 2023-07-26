@@ -1,0 +1,28 @@
+<button routerLink="/">Home</button>
+
+<div class="container mt-4">
+  <h2>Elenco Prodotti</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Nome</th>
+        <th>marca</th>
+        <th>Prezzo</th>
+       <!--  <th>Azioni</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ product.nome }}</td>
+        <td>{{ product.marca }}</td>
+        <td>{{ product.prezzo | currency:"EUR":"symbol" }}</td>
+      <!--   <td>
+          <button class="btn btn-primary" >Dettagli</button>
+        </td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+

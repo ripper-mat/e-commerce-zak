@@ -1,0 +1,33 @@
+<button routerLink="/">Home</button>
+
+<div class="container mt-4">
+  <h2>Elenco Clienti</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Carta di Credito</th>
+        <th>Elimina</th>
+       <!--  <th>Azioni</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ client.nome }}</td>
+        <td>{{ client.cognome }}</td>
+        <td>{{ client.cartaDiCredito }}</td>
+        <td>
+          <button type="button" (click)="modifica(client)" style="margin-right: 1rem;">update</button>
+          <button type="button" (click)="elimina(client.id!)">X</button>
+        </td>
+      <!--   <td>
+          <button class="btn btn-primary" >Dettagli</button>
+        </td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+

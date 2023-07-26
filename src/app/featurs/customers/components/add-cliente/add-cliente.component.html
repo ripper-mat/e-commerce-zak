@@ -1,0 +1,14 @@
+<p>add-cliente works!</p>
+
+<form [formGroup]="homeForm" (ngSubmit)="onSubmit()">
+  <label>Nome</label>
+  <input type="text" formControlName="nome">
+
+  <label>Cognome</label>
+  <input type="text" formControlName="cognome" >
+
+  <label>Carta Di Credito</label>
+  <input type="text" formControlName="cartaDiCredito">
+
+  <button type="submit">Invia</button>
+</form>
