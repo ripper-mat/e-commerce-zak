@@ -18,7 +18,7 @@ export class ProductViewService {
   // ?? => null coalescing operator
   getForm(prodotto?: Prodotto): FormGroup<ProdottoForm> {
     return new FormGroup<ProdottoForm>({
-      id: new FormControl<number | undefined>(prodotto?.id ?? undefined, {
+      id_prodotto: new FormControl<number | undefined>(prodotto?.id_prodotto ?? undefined, {
         nonNullable: true,
       }),
       nome: new FormControl<string>(prodotto?.nome ?? '', { nonNullable: true }),

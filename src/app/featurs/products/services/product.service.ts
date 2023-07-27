@@ -25,16 +25,16 @@ export class ProductService {
     return this.http.put(url, formData);
   }
 
-  deleteProdotto(id: number): Observable<any> {
-    const url = `${this.baseUrl}/myprodotto/delete/${id}`;
+  deleteProdotto(id_prodotto: number): Observable<any> {
+    const url = `${this.baseUrl}/myprodotto/delete/${id_prodotto}`;
     return this.http.delete(url);
   }
 
 
 
   updateProdotto(formData: Prodotto): Observable<Prodotto> {
-    const { id, nome, marca, prezzo } = formData;
-    const url = `${this.baseUrl}/mycliente/update/${id}`;
+    const { id_prodotto, nome, marca, prezzo } = formData;
+    const url = `${this.baseUrl}/myprodotto/update/${id_prodotto}`;
     const params = new HttpParams().appendAll({
       nome,
       marca,

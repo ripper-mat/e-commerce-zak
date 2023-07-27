@@ -1,7 +1,7 @@
 import { FormControl, FormGroup } from "@angular/forms";
 // Form model
 export interface ProdottoForm{
-  id? : FormControl<number | undefined>;
+  id_prodotto? : FormControl<number | undefined>;
   nome : FormControl<string>;
   marca : FormControl<string>;
   prezzo : FormControl<number>;
@@ -14,5 +14,5 @@ export interface Cliente{
   cartaDiCredito : string;
 } */
 // Data Model = > Forma abbreviata
-export type Prodotto = ReturnType<FormGroup<ProdottoForm>['getRawValue']> & Partial<{id:number}>;
+export type Prodotto = ReturnType<FormGroup<ProdottoForm>['getRawValue']> & Partial<{id_prodotto:number}>;
 /* export type PartialClientForm = Partial<AddClienteForm> */

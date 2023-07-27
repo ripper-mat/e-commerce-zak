@@ -38,11 +38,11 @@ export class UpdateProductsComponent implements OnInit {
       .subscribe({
         next: (response) => {
           // Handle the response from the service (optional)
-          console.log('Cliente updated successfully:', response);
+          console.log('Prodotto updated successfully:', response);
         },
         error: (error) => {
           // Handle errors (optional)
-          console.error('Error updated cliente:', error);
+          console.error('Error updated Prodotto:', error);
         },
       });
     }
