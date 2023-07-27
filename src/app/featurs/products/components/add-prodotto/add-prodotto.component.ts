@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ProductService } from 'src/app/services/products/product.service';
+import { ProductService } from 'src/app/featurs/products/services/product.service';
 
 @Component({
   selector: 'app-add-prodotto',

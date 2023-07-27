@@ -7,11 +7,11 @@ import { HomeComponent } from './featurs/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 //Angular materia
 
 import { MatTableModule } from '@angular/material/table';
-import { OrderService } from './services/orders/order.service';
 import { ReactiveFormsModule } from '@angular/forms';
 
 // fine Angular Material
@@ -24,8 +24,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatTableModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule
   ],
-  providers: [OrderService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
